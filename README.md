@@ -1,1 +1,1 @@
-# -WeChatMiniProgram
+# WeChatMiniProgram
