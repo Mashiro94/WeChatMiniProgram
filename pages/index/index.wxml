@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">IP百问</view>
+  </view>
+  <view class="page__bd">
+    <view wx:for="{{showJsonList}}" wx:for-index="id">
+      <text>{{item.id}}.{{item.content}}\n\n</text>
+      <radio-group bindchange="radioChange">
+        <label wx:for="{{item.answers}}">
+          <view><radio value="{{id}}-{{item.value}}"/>{{item.content}}\n</view>
+        </label>
+      </radio-group>
+    </view>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="bindSubmitTap">确认提交</button>
+    </view>
+    <view class="weui-footer weui-footer_fixed-bottom">
+      <view class="weui-footer__links">
+        <navigator url="" class="weui-footer__link">IP百问</navigator>
+      </view>
+      <view class="weui-footer__text">Copyright © SPTL</view>
+    </view>
+  </view>
+</view>
